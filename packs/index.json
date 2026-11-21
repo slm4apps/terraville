@@ -1,0 +1,49 @@
+{
+ "_note": "Game modes the demo offers. pack = packs/<pack>.json (null = free build, no game runtime). world = the starting world spec. Order = order of the picker cards.",
+ "modes": [
+  {
+   "id": "free",
+   "title": "Free build",
+   "about": "Say a world, add anything, change the style. No enemies: just the open-world model.",
+   "pack": null,
+   "world": {
+    "biome": "forest",
+    "terrain": "hilly",
+    "water": "lake",
+    "time": "day",
+    "features": [
+     {
+      "name": "village",
+      "count": 1
+     }
+    ],
+    "seed": 7
+   },
+   "try": [
+    "a snowy mountain world at night",
+    "add a castle",
+    "spawn 3 horses",
+    "make it look like minecraft",
+    "put a fridge here"
+   ]
+  },
+  {
+   "id": "zombies",
+   "title": "Zombie survival",
+   "about": "Waves of zombies. Make weapons, towers and traps by saying them.",
+   "pack": "zombies"
+  },
+  {
+   "id": "pirates",
+   "title": "Pirates vs sharks",
+   "about": "An island under attack: pirates from the beach, sharks in the water.",
+   "pack": "pirates"
+  },
+  {
+   "id": "hunt",
+   "title": "Scavenger hunt",
+   "about": "I name a thing, you make it by saying it. 10 things, 30 seconds each.",
+   "pack": "hunt"
+  }
+ ]
+}

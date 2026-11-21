@@ -1,0 +1,95 @@
+{
+ "items": 60,
+ "by_verb": {
+  "conjure": "48/60 (80.0 %)",
+  "whip up": "59/60 (98.3 %)",
+  "materialize": "53/60 (88.3 %)",
+  "make": "59/60 (98.3 %)",
+  "add": "58/60 (96.7 %)",
+  "spawn": "59/60 (98.3 %)"
+ },
+ "held_pct": 88.9,
+ "seen_pct": 97.8,
+ "misses": [
+  {
+   "text": "conjure an apartment building",
+   "got": "object:jump pad"
+  },
+  {
+   "text": "conjure a binoculars",
+   "got": "object:storage jar"
+  },
+  {
+   "text": "conjure a bomb",
+   "got": "object:crowbar"
+  },
+  {
+   "text": "conjure a cog",
+   "got": "object:running man"
+  },
+  {
+   "text": "conjure a farmer",
+   "got": "object:storage jar"
+  },
+  {
+   "text": "conjure a key holder",
+   "got": "object:honey jar set"
+  },
+  {
+   "text": "conjure a ladybird",
+   "got": "object:sideboard"
+  },
+  {
+   "text": "conjure a map board",
+   "got": "object:storage jar"
+  },
+  {
+   "text": "conjure a milk carton",
+   "got": "object:juice box"
+  },
+  {
+   "text": "conjure a snow laden pine tree",
+   "got": "object:woman in jeans and jacket"
+  },
+  {
+   "text": "conjure a stone well",
+   "got": "object:jellyfish"
+  },
+  {
+   "text": "conjure a tower",
+   "got": "object:arrow"
+  },
+  {
+   "text": "whip up an iron gate",
+   "got": "object:portcullis"
+  },
+  {
+   "text": "materialize a bomb",
+   "got": "object:zombie"
+  },
+  {
+   "text": "materialize a cart",
+   "got": "object:mine cart"
+  },
+  {
+   "text": "materialize a cog",
+   "got": "object:bumper car pavilion"
+  },
+  {
+   "text": "materialize a flame fountain",
+   "got": "object:stone fountain"
+  },
+  {
+   "text": "materialize an iron gate",
+   "got": "object:portcullis"
+  },
+  {
+   "text": "materialize a milk carton",
+   "got": "adjust"
+  },
+  {
+   "text": "materialize a tower",
+   "got": "object:station clock tower"
+  }
+ ]
+}

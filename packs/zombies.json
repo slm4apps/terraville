@@ -1,0 +1,552 @@
+{
+ "id": "zombies",
+ "title": "Zombies vs you",
+ "about": "A content PACK: all game-specific facts live here as data. The engine (src/gamekit.js) knows only generic behaviours, effects, resources and rules; it reads this file. Another pack is another game.",
+ "tiers": {
+  "speed": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.5,
+   "high": 2.3,
+   "extreme": 3.4
+  },
+  "health": {
+   "tiny": 0.3,
+   "low": 0.7,
+   "mid": 1.5,
+   "high": 5,
+   "extreme": 25
+  },
+  "damage": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.4,
+   "high": 2.4,
+   "extreme": 4
+  },
+  "size": {
+   "tiny": 0.6,
+   "low": 0.9,
+   "mid": 1.0,
+   "high": 1.7,
+   "extreme": 2.9
+  },
+  "weapon_damage": {
+   "tiny": 8,
+   "low": 14,
+   "mid": 22,
+   "high": 55,
+   "extreme": 95
+  },
+  "weapon_range": {
+   "tiny": 2.6,
+   "low": 15,
+   "mid": 32,
+   "high": 75,
+   "extreme": 170
+  },
+  "weapon_rate": {
+   "tiny": 1.3,
+   "low": 0.85,
+   "mid": 0.45,
+   "high": 0.25,
+   "extreme": 0.11
+  }
+ },
+ "resources": {
+  "scrap": {
+   "start": 20,
+   "label": "SCRAP",
+   "earn": {
+    "kill": 4
+   }
+  }
+ },
+ "player": {
+  "health": 100,
+  "weapon": {
+   "name": "fists",
+   "role": "weapon",
+   "damage": "low",
+   "range": "tiny",
+   "rate": "low",
+   "tier": 0
+  }
+ },
+ "enemies": {
+  "walker": {
+   "size": "mid",
+   "health": "mid",
+   "speed": "mid",
+   "damage": "mid",
+   "color": "0x6f9f5a",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 1,
+   "from_wave": 1
+  },
+  "runner": {
+   "size": "mid",
+   "health": "low",
+   "speed": "high",
+   "damage": "low",
+   "color": "0xb07a4a",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 0.6,
+   "from_wave": 2
+  },
+  "crawler": {
+   "size": "tiny",
+   "health": "low",
+   "speed": "mid",
+   "damage": "low",
+   "color": "0x5a7a5a",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 0.4,
+   "from_wave": 3
+  },
+  "spitter": {
+   "size": "mid",
+   "health": "low",
+   "speed": "low",
+   "damage": "low",
+   "color": "0x9acd32",
+   "behaviours": [
+    "keep_distance",
+    "ranged_attack"
+   ],
+   "weight": 0.35,
+   "from_wave": 3,
+   "ranged": {
+    "range": "low",
+    "rate": "low"
+   }
+  },
+  "climber": {
+   "size": "mid",
+   "health": "low",
+   "speed": "mid",
+   "damage": "mid",
+   "color": "0xc0b060",
+   "behaviours": [
+    "seek",
+    "climb",
+    "melee_attack"
+   ],
+   "weight": 0.3,
+   "from_wave": 3,
+   "climb": 4.2
+  },
+  "breaker": {
+   "size": "high",
+   "health": "high",
+   "speed": "mid",
+   "damage": "mid",
+   "color": "0x7a4a3a",
+   "behaviours": [
+    "seek",
+    "break_structure",
+    "melee_attack"
+   ],
+   "weight": 0.25,
+   "from_wave": 4
+  },
+  "tank": {
+   "size": "high",
+   "health": "high",
+   "speed": "low",
+   "damage": "high",
+   "color": "0x4a5a3a",
+   "behaviours": [
+    "seek",
+    "break_structure",
+    "melee_attack"
+   ],
+   "weight": 0.2,
+   "from_wave": 4
+  },
+  "boss": {
+   "size": "extreme",
+   "health": "extreme",
+   "speed": "low",
+   "damage": "high",
+   "color": "0x6a1a1a",
+   "behaviours": [
+    "seek",
+    "break_structure",
+    "melee_attack",
+    "slam"
+   ],
+   "weight": 0,
+   "from_wave": 5,
+   "every_waves": 5
+  }
+ },
+ "spawn": {
+  "ring": [
+   24,
+   46
+  ],
+  "first_wave_delay": 4,
+  "base_count": 3,
+  "per_wave": 1.7,
+  "power_scale": 0.12,
+  "max_alive": 64,
+  "interval": [
+   9,
+   26
+  ],
+  "interval_power": 0.8,
+  "hp_per_wave": 7,
+  "hp_base": 30
+ },
+ "items": {
+  "melee": {
+   "role": "weapon",
+   "damage": "mid",
+   "range": "tiny",
+   "rate": "mid",
+   "cost": 6,
+   "tier": 0.5
+  },
+  "pistol": {
+   "role": "weapon",
+   "damage": "mid",
+   "range": "high",
+   "rate": "high",
+   "cost": 14,
+   "tier": 1
+  },
+  "rifle": {
+   "role": "weapon",
+   "damage": "low",
+   "range": "high",
+   "rate": "extreme",
+   "cost": 28,
+   "tier": 2.5
+  },
+  "shotgun": {
+   "role": "weapon",
+   "damage": "low",
+   "range": "mid",
+   "rate": "low",
+   "cost": 24,
+   "tier": 2,
+   "pellets": 6,
+   "spread": 0.09
+  },
+  "sniper": {
+   "role": "weapon",
+   "damage": "extreme",
+   "range": "extreme",
+   "rate": "tiny",
+   "cost": 40,
+   "tier": 3
+  },
+  "crossbow": {
+   "role": "weapon",
+   "damage": "high",
+   "range": "high",
+   "rate": "low",
+   "cost": 20,
+   "tier": 1.5
+  },
+  "grenade": {
+   "role": "explosive",
+   "damage": "extreme",
+   "radius": 6.5,
+   "range": 18,
+   "uses": 3,
+   "cost": 10,
+   "tier": 1,
+   "rate": "tiny"
+  },
+  "turret": {
+   "role": "deployable",
+   "deploy": "auto_gun",
+   "cost": 45,
+   "hp": 90,
+   "life": 80,
+   "range": 45,
+   "tier": 3
+  },
+  "mine": {
+   "role": "deployable",
+   "deploy": "contact_blast",
+   "cost": 12,
+   "radius": 4.5,
+   "damage": 90,
+   "tier": 0.5
+  },
+  "platform": {
+   "role": "build",
+   "shape": "slab",
+   "w": 4,
+   "d": 4,
+   "rise": 0.5,
+   "cost": 6,
+   "hp": 260
+  },
+  "stairs": {
+   "role": "build",
+   "shape": "stairs",
+   "steps": 6,
+   "cost": 8,
+   "hp": 180
+  },
+  "wall": {
+   "role": "build",
+   "shape": "wall",
+   "len": 5,
+   "h": 2.6,
+   "cost": 5,
+   "hp": 360
+  },
+  "tower": {
+   "role": "build",
+   "shape": "tower",
+   "cost": 18,
+   "hp": 260
+  }
+ },
+ "naming": {
+  "_note": "How a NAME maps to an item is DATA, not code: the model picks the item; these are hints the library stat sheets will replace (generated offline by big models for every library item).",
+  "melee": [
+   "sword",
+   "knife",
+   "axe",
+   "bat",
+   "crowbar",
+   "hammer",
+   "pickaxe",
+   "mace",
+   "katana",
+   "dagger",
+   "pan",
+   "shovel",
+   "spear",
+   "club",
+   "machete"
+  ],
+  "pistol": [
+   "pistol",
+   "revolver",
+   "handgun",
+   "glock"
+  ],
+  "rifle": [
+   "rifle",
+   "smg",
+   "machine gun",
+   "assault",
+   "ak",
+   "uzi",
+   "submachine"
+  ],
+  "shotgun": [
+   "shotgun"
+  ],
+  "sniper": [
+   "sniper"
+  ],
+  "crossbow": [
+   "crossbow",
+   "bow"
+  ],
+  "grenade": [
+   "grenade",
+   "bomb",
+   "dynamite",
+   "molotov",
+   "tnt"
+  ],
+  "turret": [
+   "turret",
+   "cannon",
+   "sentry"
+  ],
+  "mine": [
+   "mine",
+   "trap",
+   "spike"
+  ],
+  "platform": [
+   "platform",
+   "slab",
+   "floor",
+   "deck"
+  ],
+  "stairs": [
+   "stair",
+   "stairs",
+   "ramp"
+  ],
+  "wall": [
+   "wall",
+   "barricade",
+   "fence",
+   "barrier"
+  ],
+  "tower": [
+   "tower",
+   "watchtower"
+  ]
+ },
+ "director": {
+  "_note": "Generic counter rules: a CONDITION on what the player has / does -> a re-weighting of enemy kinds, with a message. The engine evaluates them; it does not know what they mean.",
+  "power": {
+   "weapon_tier": 1,
+   "deployable": 3,
+   "build_each": 0.4,
+   "build_cap": 30,
+   "height_over": 2.2,
+   "height_bonus": 2
+  },
+  "rules": [
+   {
+    "when": "height_over",
+    "value": 2.2,
+    "weight": {
+     "climber": 4,
+     "spitter": 3
+    },
+    "say": "you are up high: climbers and spitters"
+   },
+   {
+    "when": "has_role",
+    "value": "deployable",
+    "weight": {
+     "breaker": 3,
+     "tank": 2
+    },
+    "say": "deployables: breakers hunt them"
+   },
+   {
+    "when": "has_shape",
+    "value": "wall",
+    "weight": {
+     "breaker": 2,
+     "tank": 2
+    },
+    "say": "walls: tanks come to smash them"
+   },
+   {
+    "when": "weapons_at_least",
+    "value": 2,
+    "weight": {
+     "runner": 2.5
+    },
+    "say": "strong guns: runners rush you"
+   },
+   {
+    "when": "has_item",
+    "value": "mine",
+    "weight": {
+     "crawler": 2
+    },
+    "say": "mines: crawlers slip in low"
+   },
+   {
+    "when": "no_ranged_weapon",
+    "value": 0,
+    "weight": {
+     "spitter": 2
+    }
+   }
+  ]
+ },
+ "hud": [
+  "health",
+  "resource:scrap",
+  "wave",
+  "kills",
+  "enemies_alive",
+  "weapon",
+  "height",
+  "power",
+  "deployables",
+  "built",
+  "time",
+  "destroyed"
+ ],
+ "intro": "Zombies are coming. Scrap 20: make a pistol (14), then build up. Everything you add, they answer.",
+ "naming_order": [
+  "tower",
+  "stairs",
+  "platform",
+  "wall",
+  "turret",
+  "mine",
+  "grenade",
+  "shotgun",
+  "sniper",
+  "crossbow",
+  "rifle",
+  "pistol",
+  "melee"
+ ],
+ "fallback_item": "melee",
+ "adjust": {
+  "_note": "What a live adjustment (aspect + direction words from the model) means in THIS game. Aspects: difficulty, speed, health, damage, spawn, wave, or a resource name.",
+  "factors": {
+   "up": 1.25,
+   "down": 0.8,
+   "much_up": 1.6,
+   "much_down": 0.5
+  },
+  "grant": {
+   "up": 40,
+   "much_up": 100,
+   "down": 0,
+   "much_down": 0
+  },
+  "resource_aspects": {
+   "scrap": "scrap"
+  }
+ },
+ "world": {
+  "biome": "grassland",
+  "terrain": "flat",
+  "water": "none",
+  "time": "day",
+  "style": "apocalypse",
+  "seed": 21
+ },
+ "actions": [
+  [
+   "Harder",
+   "make it harder"
+  ],
+  [
+   "Easier",
+   "make it easier"
+  ],
+  [
+   "Faster zombies",
+   "zombies faster"
+  ],
+  [
+   "More scrap",
+   "give me more scrap"
+  ],
+  [
+   "Next wave",
+   "send the next wave"
+  ]
+ ],
+ "try": [
+  "make a pistol",
+  "build a tower",
+  "place 3 mines",
+  "make it harder",
+  "give me a shotgun"
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "train": 96640,
+ "val": 660,
+ "test_seen": 437,
+ "test_held_phrasing": 300,
+ "test_held_synonyms": 360,
+ "out_vocab": 1607,
+ "in_vocab": 45,
+ "kinds": {
+  "object": 38040,
+  "world": 33716,
+  "adjust": 9000,
+  "tool": 6758,
+  "patch": 4519,
+  "say": 4607
+ },
+ "max_tokens": 19,
+ "max_chars": 112
+}

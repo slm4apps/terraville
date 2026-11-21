@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300"><g transform="translate(40,50) scale(1.0)">
+  <polygon points="100,60 20,150 100,150" fill="#2b7d39"/>
+  <polygon points="100,60 180,150 100,150" fill="#3FA34D"/>
+  <polygon points="100,60 150,112 100,150" fill="#6ccf7a" opacity=".85"/>
+  <polygon points="10,150 190,150 165,176 35,176" fill="#8a5a3a"/>
+  <polygon points="100,150 190,150 165,176 100,176" fill="#6e4529"/>
+  <rect x="85" y="68" width="30" height="26" fill="#f4ead2"/>
+  <rect x="95" y="78" width="10" height="16" fill="#8a5a3a"/>
+  <polygon points="80,69 100,47 120,69" fill="#f2b632"/>
+  <path d="M8 188 Q30 178 52 188 T96 188 T140 188 T192 188" fill="none" stroke="#f2b632" stroke-width="5" stroke-linecap="round"/>
+</g><text x="264" y="182" font-family="Futura, 'Avenir Next', 'Helvetica Neue', Arial, sans-serif" font-size="120" font-weight="700" fill="#fff">Terra<tspan fill="#f2b632">ville</tspan></text><text x="268" y="222" font-family="Futura, 'Avenir Next', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="500" fill="#c9d3ee">Words in. Worlds out.</text></svg>

@@ -1,0 +1,75 @@
+{
+ "house": [
+  "small house",
+  "two story house",
+  "family house",
+  "family home",
+  "home",
+  "house with a roof",
+  "gable roof house",
+  "house with a red roof",
+  "suburban house",
+  "pitched roof house",
+  "simple house"
+ ],
+ "fridge": [
+  "refrigerator",
+  "kitchen fridge",
+  "freezer"
+ ],
+ "fantasy sword": [
+  "sword",
+  "medieval sword",
+  "blade"
+ ],
+ "kite shield": [
+  "shield",
+  "knight shield"
+ ],
+ "helmet visor": [
+  "helmet",
+  "combat helmet",
+  "battle helmet"
+ ],
+ "car": [
+  "sports car",
+  "race car",
+  "family car",
+  "automobile"
+ ],
+ "castle": [
+  "medieval castle",
+  "fortress",
+  "stone castle"
+ ],
+ "skyscraper": [
+  "tall tower block",
+  "office tower",
+  "high rise",
+  "tall building"
+ ],
+ "barn": [
+  "farm barn",
+  "red barn"
+ ],
+ "medkit": [
+  "first aid kit",
+  "health kit"
+ ],
+ "crate chest": [
+  "airdrop crate",
+  "supply crate",
+  "loot crate",
+  "supply drop"
+ ],
+ "tanker truck": [
+  "fuel truck"
+ ],
+ "police car": [
+  "cop car",
+  "police vehicle"
+ ],
+ "lamp post": [
+  "street light"
+ ]
+}

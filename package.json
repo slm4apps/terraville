@@ -1,0 +1,17 @@
+{
+  "name": "terraville",
+  "version": "0.1.0",
+  "description": "Terraville: a 5.8 M-parameter open-world model that runs in the web page",
+  "scripts": {
+    "test": "node --test tests/ && node tests/tinylm.parity.mjs",
+    "serve": "python3 -m http.server 8077 --bind 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "slm4apps",
+  "license": "Apache-2.0",
+  "type": "module",
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "private": true
+}

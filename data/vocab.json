@@ -1,0 +1,277 @@
+{
+ "vocab": {
+  "biome": [
+   "forest",
+   "desert",
+   "snow",
+   "grassland",
+   "mountains",
+   "swamp",
+   "beach",
+   "island"
+  ],
+  "water": [
+   "none",
+   "lake",
+   "river",
+   "sea"
+  ],
+  "terrain": [
+   "flat",
+   "hilly",
+   "steep"
+  ],
+  "time": [
+   "day",
+   "night"
+  ],
+  "density": [
+   "none",
+   "sparse",
+   "normal",
+   "dense"
+  ],
+  "plants": [
+   "trees",
+   "rocks",
+   "grass",
+   "flowers",
+   "crystals"
+  ],
+  "feature": [
+   "village",
+   "ruins",
+   "road",
+   "bridge",
+   "tower",
+   "camp",
+   "cave"
+  ],
+  "game": [
+   "collect",
+   "race",
+   "survive",
+   "build"
+  ],
+  "tool": [
+   "dig",
+   "place",
+   "light",
+   "pickup"
+  ],
+  "toolSize": [
+   "small",
+   "medium",
+   "large"
+  ],
+  "target": [
+   "crystals",
+   "flowers",
+   "rocks",
+   "trees"
+  ],
+  "object": [
+   "lamp",
+   "bench",
+   "hut"
+  ],
+  "shape": [
+   "box",
+   "cylinder",
+   "cone",
+   "sphere"
+  ],
+  "sizeWord": [
+   "tiny",
+   "small",
+   "medium",
+   "large",
+   "huge"
+  ],
+  "color": [
+   "red",
+   "green",
+   "blue",
+   "yellow",
+   "brown",
+   "grey",
+   "white",
+   "black",
+   "orange",
+   "pink"
+  ],
+  "place": [
+   "on",
+   "beside",
+   "in_front",
+   "behind"
+  ],
+  "style": [
+   "minecraft",
+   "roblox",
+   "gta",
+   "pubg",
+   "fortnite",
+   "zelda",
+   "mario",
+   "cyberpunk",
+   "medieval",
+   "western",
+   "apocalypse",
+   "cartoon",
+   "lowpoly",
+   "realistic"
+  ],
+  "kind": [
+   "world",
+   "patch",
+   "object",
+   "tool",
+   "say",
+   "adjust"
+  ],
+  "aspect": [
+   "difficulty",
+   "speed",
+   "health",
+   "damage",
+   "spawn",
+   "scrap",
+   "wave"
+  ],
+  "dir": [
+   "up",
+   "down",
+   "much_up",
+   "much_down"
+  ]
+ },
+ "system": "You turn a request into ONE json object for a small world engine. Reply with json only. Kinds: world, patch, object, tool, say. world/patch fields: biome (forest, desert, snow, grassland, mountains, swamp, beach, island), terrain (flat, hilly, steep), water (none, lake, river, sea), time (day, night), density {trees, rocks, grass, flowers, crystals: none, sparse, normal, dense}, features [{name: village, ruins, road, bridge, tower, camp, cave, count: 1-8}], game {game: collect, race, survive, build, target: crystals, flowers, rocks, trees, count: 1-30}. patch has only the fields that change. object: {name: lamp, bench, hut, parts: [{shape: box, cylinder, cone, sphere, size: [x, y, z words: tiny, small, medium, large, huge], color, place: {relation: on, beside, in_front, behind, on: part index}}]}. tool: {tool: dig, place, light, pickup, size: small, medium, large}. say: {text}. Use only these words. Never write code.",
+ "gold": {
+  "lamp": [
+   {
+    "shape": "cylinder",
+    "size": [
+     "small",
+     "tiny",
+     "small"
+    ],
+    "color": "grey"
+   },
+   {
+    "shape": "cylinder",
+    "size": [
+     "tiny",
+     "large",
+     "tiny"
+    ],
+    "color": "grey",
+    "place": {
+     "relation": "on",
+     "on": 0
+    }
+   },
+   {
+    "shape": "sphere",
+    "size": [
+     "small",
+     "small",
+     "small"
+    ],
+    "color": "yellow",
+    "place": {
+     "relation": "on",
+     "on": 1
+    }
+   }
+  ],
+  "bench": [
+   {
+    "shape": "box",
+    "size": [
+     "large",
+     "tiny",
+     "small"
+    ],
+    "color": "brown"
+   },
+   {
+    "shape": "box",
+    "size": [
+     "large",
+     "small",
+     "tiny"
+    ],
+    "color": "brown",
+    "place": {
+     "relation": "on",
+     "on": 0
+    }
+   },
+   {
+    "shape": "box",
+    "size": [
+     "tiny",
+     "small",
+     "small"
+    ],
+    "color": "black",
+    "place": {
+     "relation": "beside",
+     "on": 0
+    }
+   }
+  ],
+  "hut": [
+   {
+    "shape": "box",
+    "size": [
+     "huge",
+     "large",
+     "huge"
+    ],
+    "color": "white"
+   },
+   {
+    "shape": "cone",
+    "size": [
+     "huge",
+     "medium",
+     "huge"
+    ],
+    "color": "red",
+    "place": {
+     "relation": "on",
+     "on": 0
+    }
+   },
+   {
+    "shape": "box",
+    "size": [
+     "small",
+     "medium",
+     "tiny"
+    ],
+    "color": "brown",
+    "place": {
+     "relation": "in_front",
+     "on": 0
+    }
+   }
+  ]
+ },
+ "say_messages": [
+  "Hi! Tell me a world, an object or a small game to make.",
+  "I can make worlds, simple objects and small games like collecting things.",
+  "I only make worlds, objects and simple games.",
+  "I cannot build that yet. Try a village, a tower, a camp or ruins.",
+  "I cannot build that yet. Try a lamp, a bench or a hut.",
+  "You are welcome.",
+  "I can only make or change worlds and objects.",
+  "I cannot play music.",
+  "I turn your words into worlds, objects and simple games.",
+  "I cannot save yet.",
+  "I cannot do multiplayer yet.",
+  "Tell me what to make next."
+ ]
+}

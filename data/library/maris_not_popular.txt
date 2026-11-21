@@ -1,0 +1,723 @@
+air conditioner
+air mattress
+anchor bolt
+angled support stand
+apron
+aquarium filter
+arched stand
+armoire
+ashtray
+ashtray stand
+automated pipette
+backboard
+bagpipe
+baking tray
+bar clamp
+basic clipboard
+basketball
+basketball hoop
+bath mat
+bath pillow
+bath sponge holder
+bauble
+beehive
+belt
+bike basket
+bike rack
+binder
+blackboard
+blanket
+blender
+blender jar
+blood pressure monitor
+board
+board game piece
+bobby pin
+bollard row
+bookshelf
+boxwithlid
+brake pad
+briefcase
+bristle brush
+bulletin board
+bullroarer
+cable
+cable tie
+calligraphy inkwell
+candlestick
+canine comfort
+canister
+cap holder
+capacitor
+capstan
+carabiner
+card holder
+card tray
+cartridge holder
+case
+cash register
+catenary pole
+caulk tube
+cello
+centrifuge
+centrifuge machine
+ceramic teapot
+chainsaw
+chaise lounge
+charcoal chimney
+charging stand
+charging station
+cheeseburger
+cheesecake
+chess board
+chess piece
+chiminea
+chisel
+circuit board
+circuit breaker
+circuit breaker panel
+citru juicer
+clamp
+clarinet
+clave
+cleaning cloth
+clipboard
+clothe brush
+clothe hanger
+clothe iron
+clothe pin basket
+clothe rail
+coat hook
+coffee grinder
+coffee machine
+coffee maker
+colander
+cold frame
+column
+compact juicer
+compartmentalized tray
+compartmented holder
+conductor baton
+conduit
+cone marker
+contact len case
+container
+container lid
+controller display stand
+controller stand
+cork board
+cornet
+couch
+counter
+counterweight
+crayon holder
+crib
+cricket bat
+crimping tool
+curb
+curved support stand
+curved tray
+cushion
+cutlery holder
+cutlery tray
+cutting board
+cylindrical basket with lid
+cylindrical case
+cylindrical container
+cylindrical container with lid
+cylindrical holder
+cylindrical jug container
+cylindrical organizer container
+cymbal
+dart
+dashboard tray
+data cable
+data hub
+data server
+data storage device
+defibrillator
+delineator post
+departure board
+desktop organizer
+dice
+directory board
+dish brush
+dish drying rack
+dish soap dispenser
+dishcloth
+dishwasher rack
+displaystand
+diverter knob
+divided tray
+divider panel
+divider tray carrier
+djembe
+doll
+doormat
+doorstop
+dowel pin
+drain cover
+drain stand
+drainpipe
+dress
+dresser
+drop cloth
+drumstick
+duct
+dumbbell
+dustpan
+easel stand
+electric blender
+electric circuit breaker
+electric fuse
+electric generator
+electric insulator
+electric juicer
+electric motor
+electric pressure cooker
+electric transformer
+electrical cabinet
+electrical fuse
+electrical generator
+electrical outlet
+electronic enclosure
+electronic enclosure case
+engineblock
+envelope
+equine dental float
+eraser
+erhu
+espresso grinder
+espresso machine
+espresso maker
+evening clutch
+exercise bike
+exercise saucer
+extendableladder
+extension cord
+external hard drive
+fabric shaver
+faceted cylindrical container
+faucet
+faucet aerator
+feeding tong
+ferrule
+file
+file organizer
+filing cabinet
+fireplace
+fishing rod
+flagpole
+flash drive
+flashing beacon
+floor cushion
+floor plan
+flugelhorn
+flute
+flying disc
+foam roller
+folder
+food dish
+food processor
+food storage container
+foot file
+football
+football goal
+forklift
+formal top hat
+foundation block
+frame
+frisbee
+fruit basket
+fruit picker
+fruit stand
+fuse
+game console
+garden arch
+garden label
+garden spade
+garden trowel
+garden trug basket
+gas can
+gasket
+glass
+glass pane
+globe
+glockenspiel
+glue gun
+glue stick
+goal frame
+goal post
+goggle frame
+grab bar
+grid storage tray
+grid tray
+grip tape roll
+grooming sand scoop
+groundsheet
+grout brush
+grout sponge
+growing tray
+guy line
+gym mat tile
+gymnastic mat
+hair dryer
+hamburger
+hammock
+hand wrap
+handheld grip stand
+handrail
+handrail bracket
+hanger
+hanging basket
+hard drive
+harness
+harp
+hat
+hat embellishment
+hat with wide brim
+haystack
+headphone stand
+headphoneholder
+headset stand
+heated towel rail
+heating pad
+hedge
+hex bolt
+hexagonal container
+hexagonal open top container
+hinged case
+hoe
+hollow case
+home router device
+honing guide
+honing steel
+hula hoop
+humidifier
+ice cube tray
+index card
+ink pad
+intake cover
+intercom
+ironing board
+ironing board cover
+jack stand
+jacket
+jar
+jaw harp
+jib
+jigsaw blade
+juicer
+jumper cable
+kalimba
+kerb ramp
+keychain
+kickboard
+kiosk
+kitchen run
+kitchen timer
+kitchen twine
+kitchen utensil holder
+kite
+kite stand
+knee pad
+l shaped stand
+lacrosse stick
+laser pointer
+laundry basket
+laundry marker
+laundry scoop
+leash
+led bulb
+len cover
+letter tray
+level
+lick mat
+lifting strap
+light bulb
+light fixture
+lighter
+lint brush
+lintel
+locker
+locking plier
+lute
+mallet
+maraca
+marker
+medical syringe
+medical thermometer
+medicine cabinet
+microfiber cloth
+microphone
+mineral stone
+misting nozzle
+mixer
+mobile equipment stand
+modem
+monitor
+monitor riser
+monitor stand
+monocular
+mosquito coil
+motorbike
+mousepad
+mulch mat
+multimeter
+music stand
+nail
+nail puller
+needle
+new kiosk
+newspaper stand
+nightstand
+notebook
+oil dispenser
+open rectangular case
+open top case
+open top compartmented tray
+open top container
+open top rectangular container with spout
+open top tray
+open top two compartment container
+ophthalmoscope
+otoscope
+ottoman
+paintbrush
+pancake maker
+paper clip holder
+paper towel dispenser
+paper towel holder
+paper tray
+paperclip holder
+passport cover
+passport holder
+paving slab
+payphone
+pear
+pegboard
+pegboard hook
+pen
+pen holder
+pepper grinder
+pet carrier
+pet collar
+pet feeder
+pet feeding mat
+pet feeding station
+pet leash
+pet water dispenser
+petri dish
+phonestand
+photo frame
+piccolo
+picnic basket
+picture
+pill organizer
+pillar
+pillow
+pineapple
+pipe base
+pipe block
+pipe bolt
+pipe cap
+pipe clamp bracket
+pipe cover
+pipe drain
+pipe flange
+pipe gasket
+pipe gauge
+pipe insulation
+pipe nipple
+pipe nut
+pipe organ
+pipe pad
+pipe saddle
+pipe shim
+pipe spacer
+pipe stand
+pipe strainer
+pipe support
+pipe tape
+pipe tee
+pipe wedge
+pipe wrap
+pipette
+placemat
+plane
+plant
+plant tie
+planterpot
+plantpot
+plaque
+platform
+platter
+plumb bob
+plumbing pipe
+plunger
+podium
+pointer
+power adapter
+power cord
+power inverter
+power line insulator
+power outlet
+power outlet strip
+power plug
+power socket
+power strip
+power supply
+power supply unit
+power transformer
+pram
+price gun
+price tag
+protractor
+pull up bar
+pulley
+pumice stone
+pump
+pumpkin
+punching mitt
+pushpin
+puzzle board
+puzzle game
+rag
+rail sleeper
+railway track
+rasp
+razor
+rebar
+recorder
+rectangular open top container
+rectangular open top tray
+reed
+reindeer
+remote control
+repair kit
+reptile hide
+resistance band
+ribbed container with hinged lid
+ribbed open front container
+ribbed tray
+ribbon
+rivet
+robe hook
+rockshapedholder
+roll holder rack
+roller skate
+roof beam
+roof tile
+round lid
+round tub with lid
+router
+rubik cube
+ruler
+sandbox
+sandpaper sheet
+sanitizer dispenser
+saucepan
+saxophone
+scalloped container with lid
+scarf
+scoreboard
+scraper
+screw
+scrub brush
+seal
+seed tray
+serving tray
+shackle
+shallow tray
+sharpening stone
+shaving cream can
+sheet
+sheet music stand
+shipping container
+shoe rack
+shopping basket
+shredder
+shuttlecock
+sickle
+signal
+signboard easel
+sill
+silo
+sitar
+sketchpad
+ski
+skillet
+sledge
+sledgehammer
+sleeve
+sleigh
+slicker brush
+sliding lid case
+slipper
+slow cooker
+smart thermostat
+smartphone
+smartphone case
+smartwatch
+snail
+snap hook
+snorkel
+snowtruck
+snuffle mat
+soap dispenser
+soap saver
+sock clip
+softball
+soil scoop
+solar inverter
+soldering iron
+sortingbox
+spade
+spatula
+speed bump
+spice container
+spin mop
+spinning top
+sponge
+spool of thread
+spotting belt
+sprinkler
+squash racket
+squat rack
+stain remover stick
+stall
+stamp
+stamp pad
+stapler
+starting block
+static duster
+station building
+steamer
+step platform
+stethoscope
+stocking
+stockpot
+storage case
+storage holder tray
+storage tray
+streaming microphone
+string
+stroller
+stud finder
+stuff sack
+stylu
+sunglasse case
+surfboard
+surge protector
+survey marker
+swim cap
+synthesizer
+syringe
+syringe plunger
+syringe pump
+tablet
+tablet for drawing
+tactile paving tile
+tambourine
+tamper stand
+tankard
+tape measure
+tarp
+teapot
+tenni net
+tenni racket
+test tube
+test tube rack
+theremin
+thermo
+thermometer
+thimble
+three compartment open tray
+tiered display stand
+timpani
+tire iron
+tire pressure gauge
+toothpaste tube
+toothpick holder
+top hat
+towel bar
+towel hook
+towel rack
+towel rail
+townhouse
+toycar
+track
+traffic cone
+traffic counter
+trailer
+transformer
+transformer station
+travel toiletry container
+tray
+tray with hook
+tray with lid
+treadmill
+tripod
+trolley
+trombone
+trouser hanger
+trowel
+trug
+trumpet
+tuba
+twine
+u shaped card holder
+underpass
+urn vessel
+usb flash drive
+usb hub
+vacuum brush attachment
+vacuum filter
+vanity light
+velvet ottoman
+vent cover
+vent grille
+virtual reality headset
+vise
+voice recorder
+voltage regulator
+voltage stabilizer
+wagon
+wash basin
+washbasin
+washer
+wastebasket
+wastepaper basket
+watch
+watch stand
+water valve cover
+watering can
+weather vane
+webcam
+webcam stand
+weighing scale
+weight
+weight belt
+well
+wheeled rolling case
+whetstone holder
+whistle
+whiteboard
+whiteboard marker
+windbreak
+windowframe
+wine glass
+wine glass holder stand
+winter hat
+winter jacket
+winter scarf
+wire brush
+wireless router
+wok
+wreath
+wristband
+xylophone
+yo yo
+yoga mat
+zipper
+zither

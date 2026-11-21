@@ -1,0 +1,550 @@
+{
+ "id": "pirates",
+ "title": "Pirates vs sharks",
+ "about": "A use case built on the Terraville model: an island under attack. Pirates land from the beach, sharks patrol the water. All game facts are data; the engine is src/gamekit.js.",
+ "world": {
+  "biome": "island",
+  "terrain": "hilly",
+  "water": "sea",
+  "time": "day",
+  "seed": 33
+ },
+ "tiers": {
+  "speed": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.5,
+   "high": 2.3,
+   "extreme": 3.4
+  },
+  "health": {
+   "tiny": 0.3,
+   "low": 0.7,
+   "mid": 1.5,
+   "high": 5,
+   "extreme": 25
+  },
+  "damage": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.4,
+   "high": 2.4,
+   "extreme": 4
+  },
+  "size": {
+   "tiny": 0.6,
+   "low": 0.9,
+   "mid": 1.0,
+   "high": 1.7,
+   "extreme": 2.9
+  },
+  "weapon_damage": {
+   "tiny": 8,
+   "low": 14,
+   "mid": 22,
+   "high": 55,
+   "extreme": 95
+  },
+  "weapon_range": {
+   "tiny": 2.6,
+   "low": 15,
+   "mid": 32,
+   "high": 75,
+   "extreme": 170
+  },
+  "weapon_rate": {
+   "tiny": 1.3,
+   "low": 0.85,
+   "mid": 0.45,
+   "high": 0.25,
+   "extreme": 0.11
+  }
+ },
+ "resources": {
+  "gold": {
+   "start": 20,
+   "label": "GOLD",
+   "earn": {
+    "kill": 5
+   }
+  }
+ },
+ "player": {
+  "health": 100,
+  "weapon": {
+   "name": "fists",
+   "role": "weapon",
+   "damage": "low",
+   "range": "tiny",
+   "rate": "low",
+   "tier": 0
+  }
+ },
+ "enemies": {
+  "deckhand": {
+   "size": "mid",
+   "health": "mid",
+   "speed": "mid",
+   "damage": "mid",
+   "color": "0xd9a77a",
+   "shirt": "0xe8e0d0",
+   "pants": "0x2a3550",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 1,
+   "from_wave": 1
+  },
+  "shark": {
+   "look": "fish",
+   "medium": "water",
+   "size": "high",
+   "health": "mid",
+   "speed": "high",
+   "damage": "high",
+   "color": "0x5d6d7a",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 0.8,
+   "from_wave": 1
+  },
+  "musketeer": {
+   "size": "mid",
+   "health": "low",
+   "speed": "low",
+   "damage": "low",
+   "color": "0xc99a6e",
+   "shirt": "0x8a1f1f",
+   "pants": "0x222222",
+   "behaviours": [
+    "keep_distance",
+    "ranged_attack"
+   ],
+   "weight": 0.4,
+   "from_wave": 2,
+   "ranged": {
+    "range": "low",
+    "rate": "low",
+    "color": "0xffd27a"
+   }
+  },
+  "boarder": {
+   "size": "mid",
+   "health": "low",
+   "speed": "high",
+   "damage": "low",
+   "color": "0xb98a5e",
+   "shirt": "0x2f5d3a",
+   "behaviours": [
+    "seek",
+    "climb",
+    "melee_attack"
+   ],
+   "weight": 0.4,
+   "from_wave": 3,
+   "climb": 4.2
+  },
+  "bruiser": {
+   "size": "high",
+   "health": "high",
+   "speed": "mid",
+   "damage": "mid",
+   "color": "0xa87b55",
+   "shirt": "0x3a2a1a",
+   "behaviours": [
+    "seek",
+    "break_structure",
+    "melee_attack"
+   ],
+   "weight": 0.25,
+   "from_wave": 3
+  },
+  "great white": {
+   "look": "fish",
+   "medium": "water",
+   "size": "extreme",
+   "health": "high",
+   "speed": "mid",
+   "damage": "extreme",
+   "color": "0x8d9aa5",
+   "behaviours": [
+    "seek",
+    "melee_attack"
+   ],
+   "weight": 0.15,
+   "from_wave": 4
+  },
+  "captain": {
+   "size": "extreme",
+   "health": "extreme",
+   "speed": "low",
+   "damage": "high",
+   "color": "0xd2a070",
+   "shirt": "0x101010",
+   "pants": "0x5a0f0f",
+   "behaviours": [
+    "seek",
+    "break_structure",
+    "melee_attack",
+    "slam"
+   ],
+   "weight": 0,
+   "from_wave": 5,
+   "every_waves": 5
+  }
+ },
+ "spawn": {
+  "ring": [
+   24,
+   46
+  ],
+  "first_wave_delay": 4,
+  "base_count": 3,
+  "per_wave": 1.7,
+  "power_scale": 0.12,
+  "max_alive": 64,
+  "interval": [
+   9,
+   26
+  ],
+  "interval_power": 0.8,
+  "hp_per_wave": 7,
+  "hp_base": 30
+ },
+ "items": {
+  "cutlass": {
+   "role": "weapon",
+   "damage": "mid",
+   "range": "tiny",
+   "rate": "mid",
+   "cost": 6,
+   "tier": 0.5
+  },
+  "flintlock": {
+   "role": "weapon",
+   "damage": "mid",
+   "range": "high",
+   "rate": "mid",
+   "cost": 14,
+   "tier": 1
+  },
+  "musket": {
+   "role": "weapon",
+   "damage": "high",
+   "range": "extreme",
+   "rate": "low",
+   "cost": 26,
+   "tier": 2.5
+  },
+  "blunderbuss": {
+   "role": "weapon",
+   "damage": "low",
+   "range": "mid",
+   "rate": "low",
+   "cost": 22,
+   "tier": 2,
+   "pellets": 7,
+   "spread": 0.11
+  },
+  "harpoon": {
+   "role": "weapon",
+   "damage": "high",
+   "range": "high",
+   "rate": "low",
+   "cost": 18,
+   "tier": 1.5
+  },
+  "firebomb": {
+   "role": "explosive",
+   "damage": "extreme",
+   "radius": 6,
+   "range": 18,
+   "uses": 3,
+   "cost": 10,
+   "tier": 1,
+   "rate": "tiny"
+  },
+  "cannon": {
+   "role": "deployable",
+   "deploy": "auto_gun",
+   "cost": 45,
+   "hp": 90,
+   "life": 80,
+   "range": 50,
+   "tier": 3
+  },
+  "powder keg": {
+   "role": "deployable",
+   "deploy": "contact_blast",
+   "cost": 12,
+   "radius": 5,
+   "damage": 95,
+   "tier": 0.5
+  },
+  "dock": {
+   "role": "build",
+   "shape": "slab",
+   "w": 4,
+   "d": 4,
+   "rise": 0.5,
+   "cost": 6,
+   "hp": 260
+  },
+  "stairs": {
+   "role": "build",
+   "shape": "stairs",
+   "steps": 6,
+   "cost": 8,
+   "hp": 180
+  },
+  "palisade": {
+   "role": "build",
+   "shape": "wall",
+   "len": 5,
+   "h": 2.6,
+   "cost": 5,
+   "hp": 360
+  },
+  "crows nest": {
+   "role": "build",
+   "shape": "tower",
+   "cost": 18,
+   "hp": 260
+  }
+ },
+ "naming": {
+  "_note": "Hints from a library item NAME to this pack's item (the model picks the library item; this maps it to a game role).",
+  "cutlass": [
+   "cutlass",
+   "sword",
+   "saber",
+   "sabre",
+   "knife",
+   "axe",
+   "dagger",
+   "machete",
+   "katana",
+   "club",
+   "hammer",
+   "spear",
+   "oar",
+   "pan",
+   "shovel",
+   "pickaxe",
+   "mace",
+   "bat",
+   "crowbar"
+  ],
+  "flintlock": [
+   "flintlock",
+   "pistol",
+   "revolver",
+   "handgun",
+   "glock"
+  ],
+  "musket": [
+   "musket",
+   "rifle",
+   "sniper",
+   "machine gun",
+   "assault",
+   "smg"
+  ],
+  "blunderbuss": [
+   "blunderbuss",
+   "shotgun"
+  ],
+  "harpoon": [
+   "harpoon",
+   "crossbow",
+   "bow",
+   "trident"
+  ],
+  "firebomb": [
+   "grenade",
+   "bomb",
+   "dynamite",
+   "molotov",
+   "tnt",
+   "firebomb"
+  ],
+  "cannon": [
+   "cannon",
+   "turret",
+   "sentry"
+  ],
+  "powder keg": [
+   "keg",
+   "barrel",
+   "mine",
+   "trap",
+   "spike",
+   "powder"
+  ],
+  "dock": [
+   "dock",
+   "platform",
+   "slab",
+   "floor",
+   "deck",
+   "raft",
+   "pier"
+  ],
+  "stairs": [
+   "stair",
+   "stairs",
+   "ramp",
+   "ladder"
+  ],
+  "palisade": [
+   "palisade",
+   "wall",
+   "barricade",
+   "fence",
+   "barrier"
+  ],
+  "crows nest": [
+   "crow",
+   "nest",
+   "tower",
+   "watchtower",
+   "lookout",
+   "mast",
+   "lighthouse"
+  ]
+ },
+ "naming_order": [
+  "crows nest",
+  "stairs",
+  "dock",
+  "palisade",
+  "cannon",
+  "powder keg",
+  "firebomb",
+  "blunderbuss",
+  "harpoon",
+  "musket",
+  "flintlock",
+  "cutlass"
+ ],
+ "fallback_item": "cutlass",
+ "director": {
+  "_note": "Counter rules as data: a condition on what the player has -> enemy weights, with a message.",
+  "power": {
+   "weapon_tier": 1,
+   "deployable": 3,
+   "build_each": 0.4,
+   "build_cap": 30,
+   "height_over": 2.2,
+   "height_bonus": 2
+  },
+  "rules": [
+   {
+    "when": "height_over",
+    "value": 2.2,
+    "weight": {
+     "boarder": 4,
+     "musketeer": 3
+    },
+    "say": "you are up high: boarders climb, musketeers shoot"
+   },
+   {
+    "when": "has_role",
+    "value": "deployable",
+    "weight": {
+     "bruiser": 3
+    },
+    "say": "cannons placed: bruisers come to smash them"
+   },
+   {
+    "when": "has_shape",
+    "value": "wall",
+    "weight": {
+     "bruiser": 2,
+     "captain": 1
+    },
+    "say": "a palisade: the bruisers bring axes"
+   },
+   {
+    "when": "weapons_at_least",
+    "value": 2,
+    "weight": {
+     "shark": 2,
+     "great white": 2
+    },
+    "say": "well armed on land: the sea gets hungrier"
+   },
+   {
+    "when": "no_ranged_weapon",
+    "value": 0,
+    "weight": {
+     "musketeer": 2
+    }
+   }
+  ]
+ },
+ "hud": [
+  "health",
+  "resource:gold",
+  "wave",
+  "kills",
+  "enemies_alive",
+  "weapon",
+  "height",
+  "deployables",
+  "built",
+  "time"
+ ],
+ "intro": "Pirates land on your island and sharks circle the shore. Gold 20: make a flintlock (14), then build up. Stay out of the water.",
+ "adjust": {
+  "_note": "The model's aspect words mean this here; its resource aspect (scrap) is this pack's gold.",
+  "factors": {
+   "up": 1.25,
+   "down": 0.8,
+   "much_up": 1.6,
+   "much_down": 0.5
+  },
+  "grant": {
+   "up": 40,
+   "much_up": 100,
+   "down": 0,
+   "much_down": 0
+  },
+  "resource_aspects": {
+   "scrap": "gold"
+  }
+ },
+ "actions": [
+  [
+   "Harder",
+   "make it harder"
+  ],
+  [
+   "Easier",
+   "make it easier"
+  ],
+  [
+   "Faster enemies",
+   "make them faster"
+  ],
+  [
+   "More gold",
+   "give me more scrap"
+  ],
+  [
+   "Next wave",
+   "send the next wave"
+  ]
+ ],
+ "try": [
+  "make a pistol",
+  "build a tower",
+  "place a cannon",
+  "put down 2 barrels",
+  "give me a harpoon",
+  "make it easier"
+ ]
+}

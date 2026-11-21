@@ -1,0 +1,8 @@
+{"_note": "Names with no design of their own yet, taught as synonyms of the nearest real design. Merged by export_library.py.",
+ "rifle": ["assault rifle", "machine gun", "minigun", "musket", "battle rifle"],
+ "shotgun": ["pump shotgun", "blunderbuss", "sawed off shotgun"],
+ "pistol": ["flintlock pistol", "flintlock", "handgun"],
+ "bow": ["crossbow"],
+ "laser gun": ["laser rifle", "plasma gun"],
+ "house": ["farmhouse"],
+ "windmill": ["wind turbine"]}

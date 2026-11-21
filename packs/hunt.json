@@ -1,0 +1,208 @@
+{
+ "id": "hunt",
+ "title": "Scavenger hunt",
+ "about": "A use case built on the Terraville model: the game names an item, you make it by saying it, any way you like. Scores how well the model understands you.",
+ "world": {
+  "biome": "grassland",
+  "terrain": "flat",
+  "water": "none",
+  "time": "day",
+  "seed": 11
+ },
+ "tiers": {
+  "speed": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.5,
+   "high": 2.3,
+   "extreme": 3.4
+  },
+  "health": {
+   "tiny": 0.3,
+   "low": 0.7,
+   "mid": 1.5,
+   "high": 5,
+   "extreme": 25
+  },
+  "damage": {
+   "tiny": 0.4,
+   "low": 0.8,
+   "mid": 1.4,
+   "high": 2.4,
+   "extreme": 4
+  },
+  "size": {
+   "tiny": 0.6,
+   "low": 0.9,
+   "mid": 1.0,
+   "high": 1.7,
+   "extreme": 2.9
+  },
+  "weapon_damage": {
+   "tiny": 8,
+   "low": 14,
+   "mid": 22,
+   "high": 55,
+   "extreme": 95
+  },
+  "weapon_range": {
+   "tiny": 2.6,
+   "low": 15,
+   "mid": 32,
+   "high": 75,
+   "extreme": 170
+  },
+  "weapon_rate": {
+   "tiny": 1.3,
+   "low": 0.85,
+   "mid": 0.45,
+   "high": 0.25,
+   "extreme": 0.11
+  }
+ },
+ "resources": {
+  "stars": {
+   "start": 0,
+   "label": "STARS",
+   "earn": {}
+  }
+ },
+ "player": {
+  "health": 100,
+  "weapon": {
+   "name": "hands",
+   "role": "weapon",
+   "damage": "low",
+   "range": "tiny",
+   "rate": "low",
+   "tier": 0
+  }
+ },
+ "enemies": {},
+ "spawn": {
+  "ring": [
+   24,
+   46
+  ],
+  "first_wave_delay": 4,
+  "base_count": 3,
+  "per_wave": 1.7,
+  "power_scale": 0.12,
+  "max_alive": 64,
+  "interval": [
+   9,
+   26
+  ],
+  "interval_power": 0.8,
+  "hp_per_wave": 7,
+  "hp_base": 30
+ },
+ "items": {
+  "thing": {
+   "role": "deployable",
+   "deploy": "static",
+   "cost": 0,
+   "hp": 999,
+   "life": 100000,
+   "size": 2.2,
+   "tier": 0
+  }
+ },
+ "naming": {
+  "_note": "Every library item is placed as itself; the goal check compares the model's item NAME with the target.",
+  "thing": []
+ },
+ "naming_order": [
+  "thing"
+ ],
+ "fallback_item": "thing",
+ "goals": {
+  "_note": "Generic goals: make each named item in time. Targets are library names (seeded order).",
+  "targets": [
+   "house",
+   "fridge",
+   "rabbit",
+   "horse",
+   "lighthouse",
+   "castle",
+   "barrel",
+   "bench",
+   "tent",
+   "guitar",
+   "piano",
+   "car",
+   "boat",
+   "windmill",
+   "snowman",
+   "lamp",
+   "chair",
+   "bicycle",
+   "cow",
+   "dog",
+   "sofa",
+   "clock",
+   "umbrella",
+   "mailbox",
+   "fountain",
+   "scarecrow",
+   "pumpkin",
+   "treasure chest",
+   "ladder",
+   "trophy",
+   "cactus",
+   "duck",
+   "pig",
+   "train",
+   "rocket",
+   "helicopter",
+   "tractor",
+   "teddy bear",
+   "violin",
+   "barn",
+   "skyscraper"
+  ],
+  "count": 10,
+  "time": 30
+ },
+ "director": {
+  "power": {
+   "weapon_tier": 1,
+   "deployable": 3,
+   "build_each": 0.4,
+   "build_cap": 30,
+   "height_over": 2.2,
+   "height_bonus": 2
+  },
+  "rules": []
+ },
+ "hud": [
+  "goal",
+  "deployables",
+  "time"
+ ],
+ "intro": "Scavenger hunt: I name a thing, you make it. Say it any way you like: 'make a...', 'spawn a...', 'I need a...'. 10 things, 30 seconds each.",
+ "adjust": {
+  "factors": {
+   "up": 1.25,
+   "down": 0.8,
+   "much_up": 1.6,
+   "much_down": 0.5
+  },
+  "grant": {},
+  "resource_aspects": {},
+  "wave": "next_goal",
+  "_note": "'wave' (\"next\", \"skip\", \"send the next wave\") means: skip to the next target."
+ },
+ "actions": [
+  [
+   "Skip",
+   "send the next wave"
+  ]
+ ],
+ "try": [
+  "make a horse",
+  "i need a fridge",
+  "spawn a little boat",
+  "can i have a lighthouse"
+ ]
+}

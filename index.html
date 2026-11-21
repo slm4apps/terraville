@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en">
+<head>
+<link rel="icon" href="assets/brand/terraville-icon.svg" type="image/svg+xml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terraville</title>
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.js" } }</script>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1530; font: 14px/1.4 system-ui, sans-serif; color: #fff; }
+  #view { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+  #panel { box-sizing: border-box; position: fixed; top: 12px; left: 12px; width: min(460px, calc(100vw - 24px)); background: rgba(10, 16, 30, .72); border-radius: 10px; padding: 10px 12px; backdrop-filter: blur(6px); }
+  #form { display: flex; gap: 6px; }
+  #prompt { flex: 1; min-width: 0; padding: 8px 10px; border-radius: 6px; border: 0; font: inherit; }
+  button, select, input#url { font: inherit; border-radius: 6px; border: 0; padding: 6px 10px; }
+  button { background: #3a7bd5; color: #fff; cursor: pointer; }
+  #row { display: flex; gap: 8px; margin-top: 6px; align-items: center; flex-wrap: wrap; font-size: 12px; opacity: .9; }
+  #msg { margin-top: 8px; min-height: 1.4em; }
+  #brand { display: flex; align-items: baseline; gap: 8px; margin-bottom: 6px; } #brand b { font-size: 17px; letter-spacing: .3px; } #brand small { opacity: .75; font-size: 12px; }
+  #modes, #try { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 6px; font-size: 12px; align-items: center; }
+  #modes a, #try button { color: #fff; text-decoration: none; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 3px 9px; font: inherit; cursor: pointer; }
+  #modes a.on { background: #3a7bd5; border-color: #3a7bd5; } #modes span, #try span { opacity: .65; }
+  #closest { margin-top: 4px; font-size: 13px; color: #ffd27a; }
+  #spec { max-height: 26vh; overflow: auto; margin: 6px 0 0; padding: 6px; background: rgba(0,0,0,.35); border-radius: 6px; font-size: 11px; white-space: pre-wrap; }
+  #hud { position: fixed; bottom: 8px; left: 12px; font: 12px ui-monospace, monospace; opacity: .85; text-shadow: 0 1px 2px #000; }
+  #hint { position: fixed; top: 12px; right: 12px; max-width: 220px; font-size: 12px; opacity: .8; text-shadow: 0 1px 2px #000; text-align: right; }
+  #ghud { position: fixed; inset: 0; pointer-events: none; box-shadow: inset 0 0 180px rgba(255, 0, 0, var(--hurt, 0)); font: 15px ui-monospace, Menlo, monospace; text-shadow: 0 1px 3px #000; }
+  #gtop { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: min(380px, 40vw); background: rgba(8, 12, 20, .66); border-radius: 8px; padding: 8px 10px; }
+  #gbar { height: 14px; background: #2a2f3a; border-radius: 7px; overflow: hidden; } #gfill { display: block; height: 100%; width: 100%; background: #3ddc6a; }
+  #glines { margin: 6px 0 0; white-space: pre; } #gfeed { position: absolute; left: 12px; bottom: 44px; max-width: min(760px, 70vw); white-space: pre-line; color: #ffe9a8; background: rgba(0, 0, 0, .45); padding: 4px 8px; border-radius: 6px; }
+  #gbanner { position: absolute; top: 42%; width: 100%; text-align: center; font: bold 54px system-ui, sans-serif; color: rgba(255, 60, 60, .95); }
+  #vbox { position: fixed; left: 50%; bottom: 52px; transform: translateX(-50%); background: rgba(150, 20, 20, .8); color: #fff; padding: 6px 14px; border-radius: 18px; font: 14px system-ui, sans-serif; pointer-events: none; max-width: 80vw; }
+  .rp { font-size: 12px; }
+  #cross { position: fixed; top: 50%; left: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: rgba(255,255,255,.8); pointer-events: none; }
+  #gwheel { position: fixed; right: 0; bottom: 0; width: 260px; height: 260px; z-index: 8; transition: right .15s; font: 13px system-ui, sans-serif; }
+  #garc .gi { position: absolute; width: 52px; height: 52px; border-radius: 50%; background: rgba(20,24,34,.82); color: #fff; border: 2px solid #556; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; line-height: 1.05; cursor: pointer; overflow: hidden; }
+  #garc .gi.sel { border-color: #ffd54a; box-shadow: 0 0 12px #ffd54a; background: rgba(60,50,10,.9); }
+  #garc .gi b { position: absolute; top: 3px; left: 50%; transform: translateX(-50%); font-size: 11px; color: #ffd54a; }
+  #garc .gi span { margin-top: 10px; }
+  #gall { position: absolute; right: 14px; bottom: 14px; width: 60px; height: 60px; border-radius: 50%; border: 2px solid #8ab; background: rgba(20,24,34,.9); color: #fff; cursor: pointer; font-weight: 700; }
+  #gside[hidden], #gwheel[hidden] { display: none !important; }
+  #gside { position: fixed; right: 0; top: 64px; bottom: 0; width: 230px; z-index: 6; background: rgba(14,18,28,.93); border-left: 2px solid #8ab; color: #fff; font: 13px system-ui, sans-serif; display: flex; flex-direction: column; }
+  #gtabs { display: flex; border-bottom: 1px solid #456; } #gtabs button { flex: 1; padding: 9px 2px; background: none; border: 0; color: #9ab; cursor: pointer; font-weight: 600; }
+  #gtabs button.on { color: #ffd54a; border-bottom: 2px solid #ffd54a; } #gpane { overflow: auto; padding: 8px; flex: 1; }
+  #gside .pi, #gside .act { display: block; width: 100%; text-align: left; background: #243; border: 2px solid #456; border-radius: 8px; padding: 8px; margin-bottom: 6px; cursor: pointer; color: #fff; font: inherit; }
+  #gside .pi.sel { border-color: #ffd54a; } #gside .pi small { display: block; color: #9ab; } #gside p { color: #9ab; margin: 4px 0 8px; }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="cross"></div>
+<div id="panel">
+  <div id="brand"><b>Terraville</b><small>a 5.86 M-parameter open-world model, running in this page</small></div>
+  <div id="modes"></div>
+  <form id="form" autocomplete="off">
+    <input id="prompt" placeholder='try: "a snowy forest with a lake and two villages"' aria-label="request">
+    <button type="submit">Make</button>
+    <button type="button" id="mic" title="Hands-free voice: press V. Uses your browser's speech service, which may send audio to the cloud">Mic (V)</button>
+  </form>
+  <div id="row">
+    <label>answers from <select id="src"><option value="tiny" selected>in-browser Terraville model (6 MB)</option><option value="standin">stand-in rules</option><option value="model">local server model</option></select></label>
+    <input id="url" value="http://127.0.0.1:8099/v1/chat/completions" size="30" aria-label="model url">
+    <span>answered by: <b id="via">-</b></span>
+    <button type="button" id="savesess" title="Save this game (all requests, voice lines and actions) so it can be replayed exactly">Save session</button>
+    <label class="rp">Replay <input type="file" id="replayfile" accept=".json"></label>
+  </div>
+  <div id="try"></div>
+  <div id="msg"></div>
+  <div id="closest" hidden></div>
+  <details><summary style="cursor:pointer;font-size:12px;opacity:.85;margin-top:6px">spec (what the model said)</summary><pre id="spec"></pre></details>
+</div>
+<div id="gside" hidden><div id="gtabs"></div><div id="gpane"></div></div>
+<div id="gwheel" hidden><div id="garc"></div><button id="gall" title="all items (Tab)">ALL</button></div>
+<div id="ghud" hidden><div id="gtop"><div id="gbar"><i id="gfill"></i></div><pre id="glines"></pre></div><div id="gfeed"></div><div id="gbanner"></div></div>
+<div id="vbox" hidden><b>&#9679; LISTENING</b> <span id="vtext">say a request</span></div>
+<div id="hud"></div>
+<div id="hint">click the world to look around | WASD move | Shift run | Space jump | V voice on/off | Esc to type</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

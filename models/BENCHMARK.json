@@ -1,0 +1,217 @@
+{
+ "date": "2026-11-17T12:51:07.482Z",
+ "machine": "Apple M3, 8 cores, node v26.12.0",
+ "model": {
+  "bytes": 6471680,
+  "cfg": {
+   "d": 256,
+   "heads": 4,
+   "ff": 768,
+   "enc_layers": 4,
+   "dec_layers": 3,
+   "max_in": 112,
+   "max_out": 32
+  },
+  "out_vocab": 1607,
+  "in_chars": 45
+ },
+ "splits": {
+  "all": {
+   "model": {
+    "n": 1097,
+    "exact_pct": 70.3,
+    "field_pct": 88.6,
+    "valid_pct": 99.7
+   },
+   "standin": {
+    "n": 1097,
+    "exact_pct": 38,
+    "field_pct": 77.4,
+    "valid_pct": 100
+   }
+  },
+  "test_seen": {
+   "model": {
+    "n": 437,
+    "exact_pct": 94.5,
+    "field_pct": 97.9,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 437,
+    "exact_pct": 24.7,
+    "field_pct": 63.8,
+    "valid_pct": 100
+   }
+  },
+  "kind:say": {
+   "model": {
+    "n": 9,
+    "exact_pct": 100,
+    "field_pct": 100,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 9,
+    "exact_pct": 0,
+    "field_pct": 0,
+    "valid_pct": 100
+   }
+  },
+  "kind:world": {
+   "model": {
+    "n": 669,
+    "exact_pct": 68,
+    "field_pct": 89.9,
+    "valid_pct": 99.6
+   },
+   "standin": {
+    "n": 669,
+    "exact_pct": 58.9,
+    "field_pct": 89.6,
+    "valid_pct": 100
+   }
+  },
+  "kind:object": {
+   "model": {
+    "n": 248,
+    "exact_pct": 73,
+    "field_pct": 83.1,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 248,
+    "exact_pct": 0,
+    "field_pct": 8.1,
+    "valid_pct": 100
+   }
+  },
+  "kind:patch": {
+   "model": {
+    "n": 63,
+    "exact_pct": 85.7,
+    "field_pct": 87.8,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 63,
+    "exact_pct": 28.6,
+    "field_pct": 82.4,
+    "valid_pct": 100
+   }
+  },
+  "kind:tool": {
+   "model": {
+    "n": 11,
+    "exact_pct": 100,
+    "field_pct": 100,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 11,
+    "exact_pct": 45.5,
+    "field_pct": 50,
+    "valid_pct": 100
+   }
+  },
+  "kind:adjust": {
+   "model": {
+    "n": 97,
+    "exact_pct": 62.9,
+    "field_pct": 75.3,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 97,
+    "exact_pct": 0,
+    "field_pct": 0,
+    "valid_pct": 100
+   }
+  },
+  "test_held_phrasing": {
+   "model": {
+    "n": 300,
+    "exact_pct": 91,
+    "field_pct": 97.8,
+    "valid_pct": 100
+   },
+   "standin": {
+    "n": 300,
+    "exact_pct": 56,
+    "field_pct": 88.9,
+    "valid_pct": 100
+   }
+  },
+  "test_held_synonyms": {
+   "model": {
+    "n": 360,
+    "exact_pct": 23.6,
+    "field_pct": 70.9,
+    "valid_pct": 99.2
+   },
+   "standin": {
+    "n": 360,
+    "exact_pct": 39.2,
+    "field_pct": 77.3,
+    "valid_pct": 100
+   }
+  },
+  "_avg_generate_ms": 451,
+  "_model_bytes": 6471680
+ },
+ "verb_probe": {
+  "items": 60,
+  "held_pct": 88.9,
+  "seen_pct": 97.8,
+  "by_verb": {
+   "conjure": "48/60 (80.0 %)",
+   "whip up": "59/60 (98.3 %)",
+   "materialize": "53/60 (88.3 %)",
+   "make": "59/60 (98.3 %)",
+   "add": "58/60 (96.7 %)",
+   "spawn": "59/60 (98.3 %)"
+  }
+ },
+ "latency_ms": {
+  "load": 20,
+  "p50": 191,
+  "p90": 739,
+  "p99": 1326,
+  "max": 1327,
+  "n": 200
+ },
+ "download": {
+  "files": [
+   {
+    "file": "models/terraville-tiny.bin",
+    "bytes": 6471680,
+    "gzip_bytes": 6087273
+   },
+   {
+    "file": "models/terraville-tiny.json",
+    "bytes": 41962,
+    "gzip_bytes": 10957
+   },
+   {
+    "file": "models/library.json",
+    "bytes": 1146030,
+    "gzip_bytes": 271375
+   },
+   {
+    "file": "src/tinylm.js",
+    "bytes": 9461,
+    "gzip_bytes": 3453
+   },
+   {
+    "file": "src/spec.js",
+    "bytes": 11483,
+    "gzip_bytes": 4226
+   }
+  ],
+  "total_gzip_bytes": 6377284
+ },
+ "library": {
+  "names": 1461,
+  "designs": 2141
+ }
+}
